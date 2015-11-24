@@ -19,6 +19,9 @@ import kr.ac.korea.fridge.R;
  * Use the {@link FridgeFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
+
+// kommentti
+
 public class FridgeFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
