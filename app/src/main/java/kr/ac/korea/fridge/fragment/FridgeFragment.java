@@ -20,7 +20,6 @@ import kr.ac.korea.fridge.R;
  * create an instance of this fragment.
  */
 
-// kommentti
 
 public class FridgeFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
