@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Fridge.iml" filepath="$PROJECT_DIR$/Fridge.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hci-fridge.iml" filepath="$PROJECT_DIR$/hci-fridge.iml" />
     </modules>
   </component>
 </project>
-
