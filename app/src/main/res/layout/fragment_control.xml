@@ -3,8 +3,86 @@
     android:layout_height="match_parent"
     tools:context="kr.ac.korea.fridge.fragment.ControlFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView android:layout_width="match_parent" android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            tools:showIn="@layout/activity_main">
+
+        <ImageView
+            android:layout_marginLeft="25dp"
+            android:layout_height="150dp"
+            android:layout_width="100dp"
+            android:background="@drawable/ondo_1"
+            android:id="@+id/imageView" />
+
+        <ImageView
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="230dp"
+            android:layout_height="150dp"
+            android:layout_width="100dp"
+            android:background="@drawable/ondo_2"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="55dp"
+            android:layout_marginTop="155dp"
+            android:text="3℃"
+            android:textSize="15pt"
+            android:textColor="#ff0000"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="55dp"
+            android:layout_marginTop="385dp"
+            android:text="7℃"
+            android:textSize="15pt"
+            android:textColor="#ff0000"/>
+
+        <ImageView
+            android:layout_marginLeft="165dp"
+            android:layout_height="150dp"
+            android:layout_width="100dp"
+            android:background="@drawable/water_1"/>
+
+        <ImageView
+            android:layout_marginLeft="165dp"
+            android:layout_marginTop="230dp"
+            android:layout_height="150dp"
+            android:layout_width="100dp"
+            android:background="@drawable/water_2"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="185dp"
+            android:layout_marginTop="155dp"
+            android:text="60%"
+            android:textSize="15pt"
+            android:textColor="#0000ff"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="185dp"
+            android:layout_marginTop="385dp"
+            android:text="11%"
+            android:textSize="15pt"
+            android:textColor="#0000ff"/>
+
+        <TextView
+            android:textColor="#0000ff"
+            android:layout_marginTop="200dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="------------------------------------------------------------------------"/>
+
+
+    </RelativeLayout>
 
 </FrameLayout>
