@@ -18,6 +18,8 @@ build/
 /*/build/
 
 # Android Studio setting files
+*.iml
+.idea/
 /.idea/workspace.xml
 /.idea/libraries
 

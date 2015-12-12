@@ -1,5 +1,6 @@
 package kr.ac.korea.fridge;
 
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -13,6 +14,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 
 import java.util.Locale;
 
@@ -21,7 +23,10 @@ import kr.ac.korea.fridge.fragment.CostFragment;
 import kr.ac.korea.fridge.fragment.FridgeFragment;
 
 
-public class MainActivity extends ActionBarActivity implements ActionBar.TabListener {
+public class MainActivity extends ActionBarActivity implements ActionBar.TabListener,
+        FridgeFragment.OnFragmentInteractionListener,
+        ControlFragment.OnFragmentInteractionListener,
+        CostFragment.OnFragmentInteractionListener {
 
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
@@ -42,7 +47,7 @@ public class MainActivity extends ActionBarActivity implements ActionBar.TabList
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         // Set up the action bar.
         final ActionBar actionBar = getSupportActionBar();
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
@@ -116,6 +121,11 @@ public class MainActivity extends ActionBarActivity implements ActionBar.TabList
     public void onTabReselected(ActionBar.Tab tab, FragmentTransaction fragmentTransaction) {
     }
 
+    @Override
+    public void onFragmentInteraction(Uri uri) {
+
+    }
+
     /**
      * A {@link FragmentPagerAdapter} that returns a fragment corresponding to
      * one of the sections/tabs/pages.
@@ -133,11 +143,11 @@ public class MainActivity extends ActionBarActivity implements ActionBar.TabList
 //            return PlaceholderFragment.newInstance(position + 1);
             switch(position){
                 case 0 :
-                    return new FridgeFragment();
+                    return FridgeFragment.newInstance(null, null);
                 case 1 :
-                    return new ControlFragment();
+                    return ControlFragment.newInstance(null, null);
                 case 2 :
-                    return new CostFragment();
+                    return CostFragment.newInstance(null, null);
             }
             return null;
         }
