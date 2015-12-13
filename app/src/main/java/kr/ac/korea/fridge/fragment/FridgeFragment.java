@@ -8,6 +8,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 
 import kr.ac.korea.fridge.R;
 
@@ -21,7 +22,7 @@ import kr.ac.korea.fridge.R;
  */
 
 
-public class FridgeFragment extends Fragment {
+public class FridgeFragment extends Fragment implements View.OnClickListener {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -34,6 +35,13 @@ public class FridgeFragment extends Fragment {
     private OnFragmentInteractionListener mListener;
 
     private SharedPreferences pref = null;
+
+    private LinearLayout porkLayout = null;
+    private LinearLayout cheeseLayout = null;
+    private LinearLayout firstRow = null;
+    private LinearLayout secondRow = null;
+    private LinearLayout line = null;
+    private boolean detailOpen = false;
     /**
      * Use this factory method to create a new instance of
      * this fragment using the provided parameters.
@@ -69,7 +77,18 @@ public class FridgeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_fridge, container, false);
+        View view = inflater.inflate(R.layout.fragment_fridge, container, false);
+        firstRow = (LinearLayout) view.findViewById(R.id.firstRowOfFirstSelf);
+        firstRow.setOnClickListener(this);
+        secondRow = (LinearLayout) view.findViewById(R.id.secondRowOfFirstSelf);
+        secondRow.setOnClickListener(this);
+        line = (LinearLayout) view.findViewById(R.id.ylinTilanjakaja);
+        line.setOnClickListener(this);
+        porkLayout = (LinearLayout) view.findViewById(R.id.layout_fridge_detail);
+
+        cheeseLayout = (LinearLayout) view.findViewById(R.id.layout_fridge_detail2);
+
+        return view;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -109,6 +128,48 @@ public class FridgeFragment extends Fragment {
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         public void onFragmentInteraction(Uri uri);
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch(v.getId()){
+            case R.id.firstRowOfFirstSelf :
+                hideBack();
+                showDetail1();
+                break;
+            case R.id.secondRowOfFirstSelf :
+                hideBack();
+                showDetail2();
+                break;
+            case R.id.ylinTilanjakaja :
+                hideDetail();
+                showBack();
+                break;
+        }
+    }
+
+    private void hideBack(){
+        firstRow.setVisibility(View.INVISIBLE);
+        secondRow.setVisibility(View.INVISIBLE);
+
+    }
+    private void showBack(){
+        firstRow.setVisibility(View.VISIBLE);
+        secondRow.setVisibility(View.VISIBLE);
+    }
+
+    private void hideDetail(){
+        porkLayout.setVisibility(View.INVISIBLE);
+        cheeseLayout.setVisibility(View.INVISIBLE);
+    }
+    private void showDetail1(){
+        porkLayout.setVisibility(View.VISIBLE);
+        cheeseLayout.setVisibility(View.INVISIBLE);
+    }
+
+    private void showDetail2(){
+        porkLayout.setVisibility(View.INVISIBLE);
+        cheeseLayout.setVisibility(View.VISIBLE);
     }
 
 }

@@ -7,6 +7,8 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.SeekBar;
+import android.widget.TextView;
 
 import kr.ac.korea.fridge.R;
 
@@ -29,6 +31,16 @@ public class ControlFragment extends Fragment {
     private String mParam2;
 
     private OnFragmentInteractionListener mListener;
+
+    TextView txtProgress1;
+    TextView txtWaterdrop1;
+    SeekBar seekBar1;
+    SeekBar seekBarWaterDrop1;
+
+    TextView txtProgress2;
+    TextView txtWaterdrop2;
+    SeekBar seekBar2;
+    SeekBar seekBarWaterDrop2;
 
     /**
      * Use this factory method to create a new instance of
@@ -65,7 +77,84 @@ public class ControlFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_control, container, false);
+        View view =  inflater.inflate(R.layout.fragment_control, container, false);
+        seekBar1 = (SeekBar)view.findViewById(R.id.seekBarTemp1);
+        seekBarWaterDrop1 =(SeekBar)view.findViewById(R.id.seekBarWaterDrop1);
+        txtWaterdrop1 =(TextView)view.findViewById(R.id.textwaterdrop1);
+        txtProgress1 =(TextView)view.findViewById(R.id.text1);
+        seekBar1.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+
+                txtProgress1.setText(String.valueOf((progress - 50) / 10.0f) + "℃");
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
+            }
+        });
+        seekBarWaterDrop1.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                txtWaterdrop1.setText(String.valueOf(progress) + "%");
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
+            }
+        });
+
+
+        seekBar2 = (SeekBar)view.findViewById(R.id.seekBarTemp2);
+        seekBarWaterDrop2 =(SeekBar)view.findViewById(R.id.seekBarWaterDrop2);
+        txtWaterdrop2 =(TextView)view.findViewById(R.id.textwaterdrop2);
+        txtProgress2 =(TextView)view.findViewById(R.id.text2);
+        seekBar2.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+
+                txtProgress2.setText(String.valueOf((progress - 50) / 10.0f) + "℃");
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
+            }
+        });
+        seekBarWaterDrop2.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                txtWaterdrop2.setText(String.valueOf(progress) + "%");
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
+            }
+        });
+        return view;
     }
 
     // TODO: Rename method, update argument and hook method into UI event

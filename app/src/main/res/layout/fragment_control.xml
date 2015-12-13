@@ -8,12 +8,12 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="220dp"
         android:gravity="center"
-        android:paddingBottom="@dimen/activity_vertical_margin"
         android:paddingLeft="@dimen/activity_horizontal_margin"
         android:paddingRight="@dimen/activity_horizontal_margin"
-        android:paddingTop="@dimen/activity_vertical_margin">
+
+        >
 
         <RelativeLayout
             android:id="@+id/relativeLayout1"
@@ -24,17 +24,17 @@
             <RelativeLayout
                 android:id="@+id/relativeLayoutTemp1"
                 android:layout_width="90dp"
-                android:layout_height="200dp"
+                android:layout_height="180dp"
                 android:background="@drawable/hot"
                 android:gravity="center">
 
                 <kr.ac.korea.fridge.VerticalSeekBar
                     android:id="@+id/seekBarTemp1"
                     android:layout_width="17dp"
-                    android:layout_height="150dp"
-                    android:layout_marginBottom="50dp"
-                    android:max="50"
-                    android:progress="0"
+                    android:layout_height="135dp"
+                    android:layout_marginBottom="45dp"
+                    android:max="100"
+                    android:progress="84"
                     android:progressDrawable="@drawable/seekbar"
                     android:secondaryProgress="0"
                     android:thumb="@android:color/holo_red_dark" />
@@ -46,7 +46,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/relativeLayoutTemp1"
                 android:layout_centerInParent="true"
-                android:hint="0"
+                android:text="3.4℃"
                 android:textColor="#ff0000"
                 android:textSize="14pt" />
         </RelativeLayout>
@@ -62,7 +62,7 @@
             <RelativeLayout
                 android:id="@+id/relativeLayoutWaterDrop1"
                 android:layout_width="90dp"
-                android:layout_height="200dp"
+                android:layout_height="180dp"
                 android:layout_marginLeft="20dp"
                 android:gravity="center"
                 android:padding="0dp"
@@ -71,16 +71,16 @@
                 <kr.ac.korea.fridge.VerticalSeekBar
                     android:id="@+id/seekBarWaterDrop1"
                     android:layout_width="90dp"
-                    android:layout_height="400dp"
+                    android:layout_height="180dp"
                     android:max="100"
-                    android:progress="0"
+                    android:progress="27"
                     android:progressDrawable="@drawable/seekbarwaterdrop"
                     android:secondaryProgress="0"
                     android:thumb="@android:color/holo_red_dark" />
 
                 <ImageView
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
                     android:layout_marginTop="10dp"
                     android:background="@drawable/waterdrop" />
@@ -92,7 +92,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/relativeLayoutWaterDrop1"
                 android:layout_centerInParent="true"
-                android:hint="0"
+                android:text="27%"
                 android:textColor="#1c2ded"
                 android:textSize="14pt" />
         </RelativeLayout>
@@ -109,12 +109,12 @@
     </LinearLayout>
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="220dp"
         android:gravity="center"
-        android:paddingBottom="@dimen/activity_vertical_margin"
+
         android:paddingLeft="@dimen/activity_horizontal_margin"
         android:paddingRight="@dimen/activity_horizontal_margin"
-        android:paddingTop="@dimen/activity_vertical_margin">
+        >
 
         <RelativeLayout
             android:id="@+id/relativeLayout3"
@@ -125,29 +125,29 @@
             <RelativeLayout
                 android:id="@+id/relativeLayoutTemp2"
                 android:layout_width="90dp"
-                android:layout_height="200dp"
+                android:layout_height="180dp"
                 android:background="@drawable/hot"
                 android:gravity="center">
 
                 <kr.ac.korea.fridge.VerticalSeekBar
                     android:id="@+id/seekBarTemp2"
                     android:layout_width="17dp"
-                    android:layout_height="150dp"
-                    android:layout_marginBottom="50dp"
-                    android:max="50"
-                    android:progress="0"
+                    android:layout_height="135dp"
+                    android:layout_marginBottom="45dp"
+                    android:max="100"
+                    android:progress="33"
                     android:progressDrawable="@drawable/seekbar"
                     android:secondaryProgress="0"
                     android:thumb="@android:color/holo_red_dark" />
             </RelativeLayout>
 
             <TextView
-                android:id="@+id/text"
+                android:id="@+id/text2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/relativeLayoutTemp2"
                 android:layout_centerInParent="true"
-                android:hint="0"
+                android:text="-1.7℃"
                 android:textColor="#ff0000"
                 android:textSize="14pt" />
         </RelativeLayout>
@@ -163,7 +163,7 @@
             <RelativeLayout
                 android:id="@+id/relativeLayoutWaterDrop2"
                 android:layout_width="90dp"
-                android:layout_height="200dp"
+                android:layout_height="180dp"
                 android:layout_marginLeft="20dp"
                 android:gravity="center"
                 android:padding="0dp"
@@ -172,16 +172,16 @@
                 <kr.ac.korea.fridge.VerticalSeekBar
                     android:id="@+id/seekBarWaterDrop2"
                     android:layout_width="90dp"
-                    android:layout_height="400dp"
+                    android:layout_height="180dp"
                     android:max="100"
-                    android:progress="0"
+                    android:progress="84"
                     android:progressDrawable="@drawable/seekbarwaterdrop"
                     android:secondaryProgress="0"
                     android:thumb="@android:color/holo_red_dark" />
 
                 <ImageView
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
                     android:layout_marginTop="10dp"
                     android:background="@drawable/waterdrop" />
@@ -193,7 +193,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/relativeLayoutWaterDrop2"
                 android:layout_centerInParent="true"
-                android:hint="0"
+                android:text="84%"
                 android:textColor="#1c2ded"
                 android:textSize="14pt" />
         </RelativeLayout>

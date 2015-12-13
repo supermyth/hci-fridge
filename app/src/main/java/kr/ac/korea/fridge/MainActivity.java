@@ -2,7 +2,9 @@ package kr.ac.korea.fridge;
 
 import android.app.Notification;
 import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -84,21 +86,29 @@ public class MainActivity extends ActionBarActivity implements ActionBar.TabList
                             .setText(mSectionsPagerAdapter.getPageTitle(i))
                             .setTabListener(this));
         }
+        // Set up an intent so that tapping the notifications returns to this app:
+        Intent intent = new Intent(this, MainActivity.class);
+
+        // Create a PendingIntent; we're only using one PendingIntent (ID = 0):
+        int pendingIntentId = 0;
+        PendingIntent pendingIntent =
+                PendingIntent.getActivity (this, pendingIntentId, intent, PendingIntent.FLAG_ONE_SHOT);
 
         // Instantiate the builder and set notification elements:
         Notification.Builder builder = new Notification.Builder (this)
-                .setContentTitle ("Sample Notification")
-                .setContentText ("Hello World! This is my first notification!")
-                .setSmallIcon (R.drawable.cheese);
+                .setContentIntent(pendingIntent)
+                .setContentTitle ("Expiration Alert")
+                .setContentText ("Your carrot will be expired within 1 day!")
+                .setSmallIcon (R.drawable.carrot);
 
-// Build the notification:
+        // Build the notification:
         Notification notification = builder.build();
 
-// Get the notification manager:
+        // Get the notification manager:
         NotificationManager notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
 
 
-// Publish the notification:
+        // Publish the notification:
         int notificationId = 0;
         notificationManager.notify(notificationId, notification);
     }

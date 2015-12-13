@@ -7,18 +7,18 @@
         android:layout_height="match_parent">
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="240dp"
+            android:layout_height="220dp"
             android:id="@+id/layout_fridge_detail"
             android:visibility="invisible">
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:padding="10dp">
+                android:padding="5dp">
                 <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="120dp"
-                    android:src="@drawable/pork"
+                    android:layout_height="110dp"
+                    android:src="@drawable/carrot"
                     />
             </LinearLayout>
             <LinearLayout
@@ -26,33 +26,85 @@
                 android:layout_height="match_parent"
                 android:layout_weight="2"
                 android:orientation="vertical"
-                android:padding="10dp">
+                android:padding="5dp">
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    android:text="돼지고기"
+                    android:padding="5dp"
+                    android:text="당근"
                     android:textSize="20dp"
                     />
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    android:text="무게 : 570g"
+                    android:padding="5dp"
+                    android:text="무게 : 238g"
                     android:textSize="15dp"
                     />
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    android:text="입고 : 2015년 12월 10일"
+                    android:padding="5dp"
+                    android:text="입고 : 2015년 11월 27일"
                     android:textSize="15dp"
                     />
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    android:text="유통기한 : 2015년 12월 18일\n(6일 남음)"
+                    android:padding="5dp"
+                    android:text="유통기한 : 2015년 12월 04일\n(1일 남음)"
+                    android:textSize="15dp"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:id="@+id/layout_fridge_detail2"
+            android:visibility="invisible">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="5dp">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="110dp"
+                    android:src="@drawable/cheese"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:orientation="vertical"
+                android:padding="5dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="치즈"
+                    android:textSize="20dp"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="무게 : 137g"
+                    android:textSize="15dp"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="입고 : 2015년 12월 03일"
+                    android:textSize="15dp"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="유통기한 : 2015년 12월 09일\n(6일 남음)"
                     android:textSize="15dp"
                     />
             </LinearLayout>
@@ -70,9 +122,9 @@
                 android:id="@+id/firstRowOfFirstSelf">
                 <RelativeLayout
                     android:layout_width="0dp"
-                    android:layout_height="120dp"
+                    android:layout_height="110dp"
                     android:layout_weight="1"
-                    android:padding="10dp"
+                    android:padding="5dp"
                     >
                     <ImageView
                         android:layout_width="match_parent"
@@ -92,9 +144,9 @@
                 </RelativeLayout>
                 <RelativeLayout
                     android:layout_width="0dp"
-                    android:layout_height="120dp"
+                    android:layout_height="110dp"
                     android:layout_weight="1"
-                    android:padding="10dp"
+                    android:padding="5dp"
                     >
                     <ImageView
                         android:layout_width="match_parent"
@@ -114,9 +166,9 @@
                 </RelativeLayout>
                 <RelativeLayout
                     android:layout_width="0dp"
-                    android:layout_height="120dp"
+                    android:layout_height="110dp"
                     android:layout_weight="1"
-                    android:padding="10dp">
+                    android:padding="5dp">
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -143,9 +195,9 @@
                 >
                 <RelativeLayout
                     android:layout_width="0dp"
-                    android:layout_height="120dp"
+                    android:layout_height="110dp"
                     android:layout_weight="1"
-                    android:padding="10dp">
+                    android:padding="5dp">
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -155,9 +207,9 @@
                 </RelativeLayout>
                 <RelativeLayout
                     android:layout_width="0dp"
-                    android:layout_height="120dp"
+                    android:layout_height="110dp"
                     android:layout_weight="1"
-                    android:padding="10dp">
+                    android:padding="5dp">
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -168,9 +220,9 @@
                 </RelativeLayout>
                 <RelativeLayout
                     android:layout_width="0dp"
-                    android:layout_height="120dp"
+                    android:layout_height="110dp"
                     android:layout_weight="1"
-                    android:padding="10dp">
+                    android:padding="5dp">
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -208,9 +260,9 @@
                 android:id="@+id/firstRowOfSecondSelf">
                 <RelativeLayout
                     android:layout_width="0dp"
-                    android:layout_height="120dp"
+                    android:layout_height="110dp"
                     android:layout_weight="1"
-                    android:padding="10dp">
+                    android:padding="5dp">
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -220,7 +272,7 @@
                         />
                     <ImageView
                         android:layout_width="100dp"
-                        android:layout_height="120dp"
+                        android:layout_height="110dp"
                         android:background="@color/transparent_green"
                         android:id="@+id/imageViewGreen"
                         android:layout_alignParentBottom="true"
@@ -230,9 +282,9 @@
                 </RelativeLayout>
                 <RelativeLayout
                     android:layout_width="0dp"
-                    android:layout_height="120dp"
+                    android:layout_height="110dp"
                     android:layout_weight="1"
-                    android:padding="10dp">
+                    android:padding="5dp">
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -242,9 +294,9 @@
                 </RelativeLayout>
                 <RelativeLayout
                     android:layout_width="0dp"
-                    android:layout_height="120dp"
+                    android:layout_height="110dp"
                     android:layout_weight="1"
-                    android:padding="10dp">
+                    android:padding="5dp">
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -271,9 +323,9 @@
                 android:layout_below="@+id/firstRowOfSecondSelf">
                 <RelativeLayout
                     android:layout_width="0dp"
-                    android:layout_height="120dp"
+                    android:layout_height="110dp"
                     android:layout_weight="1"
-                    android:padding="10dp">
+                    android:padding="5dp">
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -283,9 +335,9 @@
                 </RelativeLayout>
                 <RelativeLayout
                     android:layout_width="0dp"
-                    android:layout_height="120dp"
+                    android:layout_height="110dp"
                     android:layout_weight="1"
-                    android:padding="10dp">
+                    android:padding="5dp">
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -295,9 +347,9 @@
                 </RelativeLayout>
                 <RelativeLayout
                     android:layout_width="0dp"
-                    android:layout_height="120dp"
+                    android:layout_height="110dp"
                     android:layout_weight="1"
-                    android:padding="10dp">
+                    android:padding="5dp">
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
