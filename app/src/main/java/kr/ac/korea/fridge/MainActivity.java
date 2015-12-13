@@ -1,5 +1,8 @@
 package kr.ac.korea.fridge;
 
+import android.app.Notification;
+import android.app.NotificationManager;
+import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -81,6 +84,23 @@ public class MainActivity extends ActionBarActivity implements ActionBar.TabList
                             .setText(mSectionsPagerAdapter.getPageTitle(i))
                             .setTabListener(this));
         }
+
+        // Instantiate the builder and set notification elements:
+        Notification.Builder builder = new Notification.Builder (this)
+                .setContentTitle ("Sample Notification")
+                .setContentText ("Hello World! This is my first notification!")
+                .setSmallIcon (R.drawable.cheese);
+
+// Build the notification:
+        Notification notification = builder.build();
+
+// Get the notification manager:
+        NotificationManager notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+
+
+// Publish the notification:
+        int notificationId = 0;
+        notificationManager.notify(notificationId, notification);
     }
 
 
